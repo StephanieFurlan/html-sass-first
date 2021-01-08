@@ -1,5 +1,77 @@
-$color: #635628;
+$barHeightString: 80px;
+$barHeight: 80;
+$barColor: #700F32;
+$mainColor: #DC384F;
 
-h1 {
-   color: $color;
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+button:focus,
+select:focus,
+input:focus {
+   outline: 0;
+}
+
+body {
+   background-color: $mainColor;
+   font-family: 'Roboto', sans-serif;
+   color: white;
+   height: 100vh;
+}
+
+header,
+footer {
+   height: $barHeightString;
+   background-color: $barColor;
+   line-height: $barHeightString;
+   text-align: center;
+   vertical-align: middle;
+}
+
+
+header i {
+   color: $mainColor;;
+   margin-right: 10px;
+}
+
+main {
+   height: calc(100vh - #{2 * $barHeightString});
+   overflow: auto;
+}
+section {
+   margin: 10px;
+   border: 1px solid white;
+   border-radius: 10px;
+   padding: 10px;
+}
+
+section h2 {
+   color: black;
+   font-weight: bold;
+}
+
+section p {
+   margin-bottom: 10px;
+}
+section button {
+   background-color: $barColor;
+   padding: 10px 20px;
+   border-radius: 10px;
+   border: 1px solid white;
+   border: none;
+   color: inherit;
+}
+
+.button-container {
+   text-align: right;
+}
+
+footer {
+   position: sticky;
+   bottom: 0;
+   left: 0;
+   width: 100%;
 }
